@@ -615,16 +615,12 @@ is an autoregressive model of order <span class="math inline">\(p\)</span> where
 <span id="cb358-5"><a href="14.3-autoregressions.html#cb358-5" tabindex="-1"></a><span class="co">#&gt; </span></span>
 <span id="cb358-6"><a href="14.3-autoregressions.html#cb358-6" tabindex="-1"></a><span class="co">#&gt; t test of coefficients:</span></span>
 <span id="cb358-7"><a href="14.3-autoregressions.html#cb358-7" tabindex="-1"></a><span class="co">#&gt; </span></span>
-<span id="cb358-8"><a href="14.3-autoregressions.html#cb358-8" tabindex="-1"></a><span class="co">#&gt;                       Estimate Std. Error t value  Pr(&gt;|t|)</span></span>
-<span id="cb358-9"><a href="14.3-autoregressions.html#cb358-9" tabindex="-1"></a><span class="co">#&gt; (Intercept)           1.631747   0.402023  4.0588 7.096e-05</span></span>
-<span id="cb358-10"><a href="14.3-autoregressions.html#cb358-10" tabindex="-1"></a><span class="co">#&gt; L(ts(GDPGR_level))    0.277787   0.079250  3.5052 0.0005643</span></span>
-<span id="cb358-11"><a href="14.3-autoregressions.html#cb358-11" tabindex="-1"></a><span class="co">#&gt; L(ts(GDPGR_level), 2) 0.179269   0.079951  2.2422 0.0260560</span></span>
-<span id="cb358-12"><a href="14.3-autoregressions.html#cb358-12" tabindex="-1"></a><span class="co">#&gt;                          </span></span>
-<span id="cb358-13"><a href="14.3-autoregressions.html#cb358-13" tabindex="-1"></a><span class="co">#&gt; (Intercept)           ***</span></span>
-<span id="cb358-14"><a href="14.3-autoregressions.html#cb358-14" tabindex="-1"></a><span class="co">#&gt; L(ts(GDPGR_level))    ***</span></span>
-<span id="cb358-15"><a href="14.3-autoregressions.html#cb358-15" tabindex="-1"></a><span class="co">#&gt; L(ts(GDPGR_level), 2) *  </span></span>
-<span id="cb358-16"><a href="14.3-autoregressions.html#cb358-16" tabindex="-1"></a><span class="co">#&gt; ---</span></span>
-<span id="cb358-17"><a href="14.3-autoregressions.html#cb358-17" tabindex="-1"></a><span class="co">#&gt; Signif. codes:  0 &#39;***&#39; 0.001 &#39;**&#39; 0.01 &#39;*&#39; 0.05 &#39;.&#39; 0.1 &#39; &#39; 1</span></span></code></pre></div>
+<span id="cb358-8"><a href="14.3-autoregressions.html#cb358-8" tabindex="-1"></a><span class="co">#&gt;                       Estimate Std. Error t value  Pr(&gt;|t|)    </span></span>
+<span id="cb358-9"><a href="14.3-autoregressions.html#cb358-9" tabindex="-1"></a><span class="co">#&gt; (Intercept)           1.631747   0.402023  4.0588 7.096e-05 ***</span></span>
+<span id="cb358-10"><a href="14.3-autoregressions.html#cb358-10" tabindex="-1"></a><span class="co">#&gt; L(ts(GDPGR_level))    0.277787   0.079250  3.5052 0.0005643 ***</span></span>
+<span id="cb358-11"><a href="14.3-autoregressions.html#cb358-11" tabindex="-1"></a><span class="co">#&gt; L(ts(GDPGR_level), 2) 0.179269   0.079951  2.2422 0.0260560 *  </span></span>
+<span id="cb358-12"><a href="14.3-autoregressions.html#cb358-12" tabindex="-1"></a><span class="co">#&gt; ---</span></span>
+<span id="cb358-13"><a href="14.3-autoregressions.html#cb358-13" tabindex="-1"></a><span class="co">#&gt; Signif. codes:  0 &#39;***&#39; 0.001 &#39;**&#39; 0.01 &#39;*&#39; 0.05 &#39;.&#39; 0.1 &#39; &#39; 1</span></span></code></pre></div>
 <p>The estimation yields
 <span class="math display" id="eq:GDPGRAR2">\[\begin{align}
   \widehat{GDPGR}_t = \underset{(0.40)}{1.63} + \underset{(0.08)}{0.28} GDPGR_{t-1} + \underset{(0.08)}{0.18} GDPGR_{t-1}. \tag{14.3}

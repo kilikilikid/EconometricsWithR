@@ -537,14 +537,14 @@ Notice that choosing the optimal model according to the <span class="math inline
 <span id="cb381-6"><a href="14.6-llsuic.html#cb381-6" tabindex="-1"></a>                   <span class="at">start =</span> <span class="fu">c</span>(<span class="dv">1962</span>, <span class="dv">1</span>), <span class="at">end =</span> <span class="fu">c</span>(<span class="dv">2012</span>, <span class="dv">4</span>))))</span>
 <span id="cb381-7"><a href="14.6-llsuic.html#cb381-7" tabindex="-1"></a></span>
 <span id="cb381-8"><a href="14.6-llsuic.html#cb381-8" tabindex="-1"></a>BICs</span>
-<span id="cb381-9"><a href="14.6-llsuic.html#cb381-9" tabindex="-1"></a><span class="co">#&gt;          [,1]   [,2]   [,3]   [,4]    [,5]    [,6]    [,7]</span></span>
-<span id="cb381-10"><a href="14.6-llsuic.html#cb381-10" tabindex="-1"></a><span class="co">#&gt; p      2.0000 4.0000 6.0000 8.0000 10.0000 12.0000 14.0000</span></span>
-<span id="cb381-11"><a href="14.6-llsuic.html#cb381-11" tabindex="-1"></a><span class="co">#&gt; BIC    2.3411 2.3408 2.3813 2.4181  2.4568  2.5048  2.5539</span></span>
-<span id="cb381-12"><a href="14.6-llsuic.html#cb381-12" tabindex="-1"></a><span class="co">#&gt; Adj.R2 0.1332 0.1692 0.1704 0.1747  0.1773  0.1721  0.1659</span></span>
-<span id="cb381-13"><a href="14.6-llsuic.html#cb381-13" tabindex="-1"></a><span class="co">#&gt;           [,8]    [,9]   [,10]   [,11]   [,12]</span></span>
-<span id="cb381-14"><a href="14.6-llsuic.html#cb381-14" tabindex="-1"></a><span class="co">#&gt; p      16.0000 18.0000 20.0000 22.0000 24.0000</span></span>
-<span id="cb381-15"><a href="14.6-llsuic.html#cb381-15" tabindex="-1"></a><span class="co">#&gt; BIC     2.6029  2.6182  2.6646  2.7205  2.7664</span></span>
-<span id="cb381-16"><a href="14.6-llsuic.html#cb381-16" tabindex="-1"></a><span class="co">#&gt; Adj.R2  0.1586  0.1852  0.1864  0.1795  0.1810</span></span></code></pre></div>
+<span id="cb381-9"><a href="14.6-llsuic.html#cb381-9" tabindex="-1"></a><span class="co">#&gt;          [,1]   [,2]   [,3]   [,4]    [,5]    [,6]    [,7]    [,8]    [,9]</span></span>
+<span id="cb381-10"><a href="14.6-llsuic.html#cb381-10" tabindex="-1"></a><span class="co">#&gt; p      2.0000 4.0000 6.0000 8.0000 10.0000 12.0000 14.0000 16.0000 18.0000</span></span>
+<span id="cb381-11"><a href="14.6-llsuic.html#cb381-11" tabindex="-1"></a><span class="co">#&gt; BIC    2.3411 2.3408 2.3813 2.4181  2.4568  2.5048  2.5539  2.6029  2.6182</span></span>
+<span id="cb381-12"><a href="14.6-llsuic.html#cb381-12" tabindex="-1"></a><span class="co">#&gt; Adj.R2 0.1332 0.1692 0.1704 0.1747  0.1773  0.1721  0.1659  0.1586  0.1852</span></span>
+<span id="cb381-13"><a href="14.6-llsuic.html#cb381-13" tabindex="-1"></a><span class="co">#&gt;          [,10]   [,11]   [,12]</span></span>
+<span id="cb381-14"><a href="14.6-llsuic.html#cb381-14" tabindex="-1"></a><span class="co">#&gt; p      20.0000 22.0000 24.0000</span></span>
+<span id="cb381-15"><a href="14.6-llsuic.html#cb381-15" tabindex="-1"></a><span class="co">#&gt; BIC     2.6646  2.7205  2.7664</span></span>
+<span id="cb381-16"><a href="14.6-llsuic.html#cb381-16" tabindex="-1"></a><span class="co">#&gt; Adj.R2  0.1864  0.1795  0.1810</span></span></code></pre></div>
 <p>From the definition of <tt>BIC()</tt>, for ADL models with <span class="math inline">\(p=q\)</span> it follows that <tt>p</tt> reports the number of estimated coefficients <em>excluding</em> the intercept. Thus the lag order is obtained by dividing <tt>p</tt> by 2.</p>
 <div class="sourceCode" id="cb382"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb382-1"><a href="14.6-llsuic.html#cb382-1" tabindex="-1"></a><span class="co"># select the ADL model with the smallest BIC</span></span>
 <span id="cb382-2"><a href="14.6-llsuic.html#cb382-2" tabindex="-1"></a>BICs[, <span class="fu">which.min</span>(BICs[<span class="dv">2</span>, ])]</span>

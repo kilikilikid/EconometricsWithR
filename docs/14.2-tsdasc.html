@@ -550,22 +550,14 @@ Lags, First Differences, Logarithms and Growth Rates
 <p>We call <tt>quants()</tt> on observations for the period 2011:Q3 - 2013:Q1.</p>
 <div class="sourceCode" id="cb347"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb347-1"><a href="14.2-tsdasc.html#cb347-1" tabindex="-1"></a><span class="co"># obtain a data.frame with level, logarithm, annual growth rate and its 1st lag of GDP</span></span>
 <span id="cb347-2"><a href="14.2-tsdasc.html#cb347-2" tabindex="-1"></a><span class="fu">quants</span>(GDP[<span class="st">&quot;2011-07::2013-01&quot;</span>])</span>
-<span id="cb347-3"><a href="14.2-tsdasc.html#cb347-3" tabindex="-1"></a><span class="co">#&gt;            Level Logarithm AnnualGrowthRate</span></span>
-<span id="cb347-4"><a href="14.2-tsdasc.html#cb347-4" tabindex="-1"></a><span class="co">#&gt; 2011 Q3 15062.14  9.619940               NA</span></span>
-<span id="cb347-5"><a href="14.2-tsdasc.html#cb347-5" tabindex="-1"></a><span class="co">#&gt; 2011 Q4 15242.14  9.631819        4.7518062</span></span>
-<span id="cb347-6"><a href="14.2-tsdasc.html#cb347-6" tabindex="-1"></a><span class="co">#&gt; 2012 Q1 15381.56  9.640925        3.6422231</span></span>
-<span id="cb347-7"><a href="14.2-tsdasc.html#cb347-7" tabindex="-1"></a><span class="co">#&gt; 2012 Q2 15427.67  9.643918        1.1972004</span></span>
-<span id="cb347-8"><a href="14.2-tsdasc.html#cb347-8" tabindex="-1"></a><span class="co">#&gt; 2012 Q3 15533.99  9.650785        2.7470216</span></span>
-<span id="cb347-9"><a href="14.2-tsdasc.html#cb347-9" tabindex="-1"></a><span class="co">#&gt; 2012 Q4 15539.63  9.651149        0.1452808</span></span>
-<span id="cb347-10"><a href="14.2-tsdasc.html#cb347-10" tabindex="-1"></a><span class="co">#&gt; 2013 Q1 15583.95  9.653997        1.1392015</span></span>
-<span id="cb347-11"><a href="14.2-tsdasc.html#cb347-11" tabindex="-1"></a><span class="co">#&gt;         X1stLagAnnualGrowthRate</span></span>
-<span id="cb347-12"><a href="14.2-tsdasc.html#cb347-12" tabindex="-1"></a><span class="co">#&gt; 2011 Q3                      NA</span></span>
-<span id="cb347-13"><a href="14.2-tsdasc.html#cb347-13" tabindex="-1"></a><span class="co">#&gt; 2011 Q4                      NA</span></span>
-<span id="cb347-14"><a href="14.2-tsdasc.html#cb347-14" tabindex="-1"></a><span class="co">#&gt; 2012 Q1               4.7518062</span></span>
-<span id="cb347-15"><a href="14.2-tsdasc.html#cb347-15" tabindex="-1"></a><span class="co">#&gt; 2012 Q2               3.6422231</span></span>
-<span id="cb347-16"><a href="14.2-tsdasc.html#cb347-16" tabindex="-1"></a><span class="co">#&gt; 2012 Q3               1.1972004</span></span>
-<span id="cb347-17"><a href="14.2-tsdasc.html#cb347-17" tabindex="-1"></a><span class="co">#&gt; 2012 Q4               2.7470216</span></span>
-<span id="cb347-18"><a href="14.2-tsdasc.html#cb347-18" tabindex="-1"></a><span class="co">#&gt; 2013 Q1               0.1452808</span></span></code></pre></div>
+<span id="cb347-3"><a href="14.2-tsdasc.html#cb347-3" tabindex="-1"></a><span class="co">#&gt;            Level Logarithm AnnualGrowthRate X1stLagAnnualGrowthRate</span></span>
+<span id="cb347-4"><a href="14.2-tsdasc.html#cb347-4" tabindex="-1"></a><span class="co">#&gt; 2011 Q3 15062.14  9.619940               NA                      NA</span></span>
+<span id="cb347-5"><a href="14.2-tsdasc.html#cb347-5" tabindex="-1"></a><span class="co">#&gt; 2011 Q4 15242.14  9.631819        4.7518062                      NA</span></span>
+<span id="cb347-6"><a href="14.2-tsdasc.html#cb347-6" tabindex="-1"></a><span class="co">#&gt; 2012 Q1 15381.56  9.640925        3.6422231               4.7518062</span></span>
+<span id="cb347-7"><a href="14.2-tsdasc.html#cb347-7" tabindex="-1"></a><span class="co">#&gt; 2012 Q2 15427.67  9.643918        1.1972004               3.6422231</span></span>
+<span id="cb347-8"><a href="14.2-tsdasc.html#cb347-8" tabindex="-1"></a><span class="co">#&gt; 2012 Q3 15533.99  9.650785        2.7470216               1.1972004</span></span>
+<span id="cb347-9"><a href="14.2-tsdasc.html#cb347-9" tabindex="-1"></a><span class="co">#&gt; 2012 Q4 15539.63  9.651149        0.1452808               2.7470216</span></span>
+<span id="cb347-10"><a href="14.2-tsdasc.html#cb347-10" tabindex="-1"></a><span class="co">#&gt; 2013 Q1 15583.95  9.653997        1.1392015               0.1452808</span></span></code></pre></div>
 <div id="autocorrelation" class="section level4 unnumbered hasAnchor">
 <h4>Autocorrelation<a href="14.2-tsdasc.html#autocorrelation" class="anchor-section" aria-label="Anchor link to header"></a></h4>
 <p>Observations of a time series are typically correlated. This type of correlation is called <em>autocorrelation</em> or <em>serial correlation</em>. Key Concept 14.2 summarizes the concepts of population autocovariance and population autocorrelation and shows how to compute their sample equivalents.</p>
@@ -654,10 +646,8 @@ Autocorrelation and Autocovariance
 <span id="cb351-3"><a href="14.2-tsdasc.html#cb351-3" tabindex="-1"></a><span class="co">#&gt; </span></span>
 <span id="cb351-4"><a href="14.2-tsdasc.html#cb351-4" tabindex="-1"></a><span class="co">#&gt; Autocorrelations of series &#39;na.omit(NYSESW)&#39;, by lag</span></span>
 <span id="cb351-5"><a href="14.2-tsdasc.html#cb351-5" tabindex="-1"></a><span class="co">#&gt; </span></span>
-<span id="cb351-6"><a href="14.2-tsdasc.html#cb351-6" tabindex="-1"></a><span class="co">#&gt;      0      1      2      3      4      5      6      7      8 </span></span>
-<span id="cb351-7"><a href="14.2-tsdasc.html#cb351-7" tabindex="-1"></a><span class="co">#&gt;  1.000  0.040 -0.016 -0.023  0.000 -0.036 -0.027 -0.059  0.013 </span></span>
-<span id="cb351-8"><a href="14.2-tsdasc.html#cb351-8" tabindex="-1"></a><span class="co">#&gt;      9     10 </span></span>
-<span id="cb351-9"><a href="14.2-tsdasc.html#cb351-9" tabindex="-1"></a><span class="co">#&gt;  0.017  0.004</span></span></code></pre></div>
+<span id="cb351-6"><a href="14.2-tsdasc.html#cb351-6" tabindex="-1"></a><span class="co">#&gt;      0      1      2      3      4      5      6      7      8      9     10 </span></span>
+<span id="cb351-7"><a href="14.2-tsdasc.html#cb351-7" tabindex="-1"></a><span class="co">#&gt;  1.000  0.040 -0.016 -0.023  0.000 -0.036 -0.027 -0.059  0.013  0.017  0.004</span></span></code></pre></div>
 <p>The first 10 sample autocorrelation coefficients are very close to zero. The default plot generated by <code>acf()</code> provides further evidence.</p>
 <div class="sourceCode" id="cb352"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb352-1"><a href="14.2-tsdasc.html#cb352-1" tabindex="-1"></a><span class="co"># plot sample autocorrelation for the NYSESW series</span></span>
 <span id="cb352-2"><a href="14.2-tsdasc.html#cb352-2" tabindex="-1"></a><span class="fu">acf</span>(<span class="fu">na.omit</span>(NYSESW), <span class="at">main =</span> <span class="st">&quot;Sample Autocorrelation for NYSESW Data&quot;</span>)</span></code></pre></div>
