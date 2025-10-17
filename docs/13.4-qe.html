@@ -627,8 +627,10 @@ where <span class="math inline">\(D_i\)</span> is the binary treatment indicator
 <span id="cb328-10"><a href="13.4-qe.html#cb328-10" tabindex="-1"></a><span class="co">#&gt; lm(formula = Y ~ Treatment * Period, data = d)</span></span>
 <span id="cb328-11"><a href="13.4-qe.html#cb328-11" tabindex="-1"></a><span class="co">#&gt; </span></span>
 <span id="cb328-12"><a href="13.4-qe.html#cb328-12" tabindex="-1"></a><span class="co">#&gt; Coefficients:</span></span>
-<span id="cb328-13"><a href="13.4-qe.html#cb328-13" tabindex="-1"></a><span class="co">#&gt;       (Intercept)          Treatment            Period2  Treatment:Period2  </span></span>
-<span id="cb328-14"><a href="13.4-qe.html#cb328-14" tabindex="-1"></a><span class="co">#&gt;             5.858              1.197              2.104              3.960</span></span></code></pre></div>
+<span id="cb328-13"><a href="13.4-qe.html#cb328-13" tabindex="-1"></a><span class="co">#&gt;       (Intercept)          Treatment            Period2  </span></span>
+<span id="cb328-14"><a href="13.4-qe.html#cb328-14" tabindex="-1"></a><span class="co">#&gt;             5.858              1.197              2.104  </span></span>
+<span id="cb328-15"><a href="13.4-qe.html#cb328-15" tabindex="-1"></a><span class="co">#&gt; Treatment:Period2  </span></span>
+<span id="cb328-16"><a href="13.4-qe.html#cb328-16" tabindex="-1"></a><span class="co">#&gt;             3.960</span></span></code></pre></div>
 <p>As expected, the estimate of the coefficient on the interaction of the treatment dummy and the time dummy coincide with the estimates obtained using <a href="13.4-qe.html#eq:DID">(13.8)</a> and OLS estimation of <a href="13.4-qe.html#eq:did">(13.9)</a>.</p>
 </div>
 <div id="regression-discontinuity-estimators" class="section level3 unnumbered hasAnchor">

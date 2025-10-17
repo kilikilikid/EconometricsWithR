@@ -671,41 +671,48 @@ where the index <span class="math inline">\(i\)</span> refers to the entity whil
 <span id="cb238-175"><a href="10.1-panel-data.html#cb238-175" tabindex="-1"></a><span class="co">#&gt;   ..$ year : Factor w/ 7 levels &quot;1982&quot;,&quot;1983&quot;,..: 1 2 3 4 5 6 7 1 2 3 ...</span></span></code></pre></div>
 <div class="sourceCode" id="cb239"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb239-1"><a href="10.1-panel-data.html#cb239-1" tabindex="-1"></a><span class="co"># list the first few observations</span></span>
 <span id="cb239-2"><a href="10.1-panel-data.html#cb239-2" tabindex="-1"></a><span class="fu">head</span>(Fatalities)</span>
-<span id="cb239-3"><a href="10.1-panel-data.html#cb239-3" tabindex="-1"></a><span class="co">#&gt;         state year spirits unemp   income   emppop  beertax baptist  mormon</span></span>
-<span id="cb239-4"><a href="10.1-panel-data.html#cb239-4" tabindex="-1"></a><span class="co">#&gt; al-1982    al 1982    1.37  14.4 10544.15 50.69204 1.539379 30.3557 0.32829</span></span>
-<span id="cb239-5"><a href="10.1-panel-data.html#cb239-5" tabindex="-1"></a><span class="co">#&gt; al-1983    al 1983    1.36  13.7 10732.80 52.14703 1.788991 30.3336 0.34341</span></span>
-<span id="cb239-6"><a href="10.1-panel-data.html#cb239-6" tabindex="-1"></a><span class="co">#&gt; al-1984    al 1984    1.32  11.1 11108.79 54.16809 1.714286 30.3115 0.35924</span></span>
-<span id="cb239-7"><a href="10.1-panel-data.html#cb239-7" tabindex="-1"></a><span class="co">#&gt; al-1985    al 1985    1.28   8.9 11332.63 55.27114 1.652542 30.2895 0.37579</span></span>
-<span id="cb239-8"><a href="10.1-panel-data.html#cb239-8" tabindex="-1"></a><span class="co">#&gt; al-1986    al 1986    1.23   9.8 11661.51 56.51450 1.609907 30.2674 0.39311</span></span>
-<span id="cb239-9"><a href="10.1-panel-data.html#cb239-9" tabindex="-1"></a><span class="co">#&gt; al-1987    al 1987    1.18   7.8 11944.00 57.50988 1.560000 30.2453 0.41123</span></span>
-<span id="cb239-10"><a href="10.1-panel-data.html#cb239-10" tabindex="-1"></a><span class="co">#&gt;         drinkage     dry youngdrivers    miles breath jail service fatal nfatal</span></span>
-<span id="cb239-11"><a href="10.1-panel-data.html#cb239-11" tabindex="-1"></a><span class="co">#&gt; al-1982    19.00 25.0063     0.211572 7233.887     no   no      no   839    146</span></span>
-<span id="cb239-12"><a href="10.1-panel-data.html#cb239-12" tabindex="-1"></a><span class="co">#&gt; al-1983    19.00 22.9942     0.210768 7836.348     no   no      no   930    154</span></span>
-<span id="cb239-13"><a href="10.1-panel-data.html#cb239-13" tabindex="-1"></a><span class="co">#&gt; al-1984    19.00 24.0426     0.211484 8262.990     no   no      no   932    165</span></span>
-<span id="cb239-14"><a href="10.1-panel-data.html#cb239-14" tabindex="-1"></a><span class="co">#&gt; al-1985    19.67 23.6339     0.211140 8726.917     no   no      no   882    146</span></span>
-<span id="cb239-15"><a href="10.1-panel-data.html#cb239-15" tabindex="-1"></a><span class="co">#&gt; al-1986    21.00 23.4647     0.213400 8952.854     no   no      no  1081    172</span></span>
-<span id="cb239-16"><a href="10.1-panel-data.html#cb239-16" tabindex="-1"></a><span class="co">#&gt; al-1987    21.00 23.7924     0.215527 9166.302     no   no      no  1110    181</span></span>
-<span id="cb239-17"><a href="10.1-panel-data.html#cb239-17" tabindex="-1"></a><span class="co">#&gt;         sfatal fatal1517 nfatal1517 fatal1820 nfatal1820 fatal2124 nfatal2124</span></span>
-<span id="cb239-18"><a href="10.1-panel-data.html#cb239-18" tabindex="-1"></a><span class="co">#&gt; al-1982     99        53          9        99         34       120         32</span></span>
-<span id="cb239-19"><a href="10.1-panel-data.html#cb239-19" tabindex="-1"></a><span class="co">#&gt; al-1983     98        71          8       108         26       124         35</span></span>
-<span id="cb239-20"><a href="10.1-panel-data.html#cb239-20" tabindex="-1"></a><span class="co">#&gt; al-1984     94        49          7       103         25       118         34</span></span>
-<span id="cb239-21"><a href="10.1-panel-data.html#cb239-21" tabindex="-1"></a><span class="co">#&gt; al-1985     98        66          9       100         23       114         45</span></span>
-<span id="cb239-22"><a href="10.1-panel-data.html#cb239-22" tabindex="-1"></a><span class="co">#&gt; al-1986    119        82         10       120         23       119         29</span></span>
-<span id="cb239-23"><a href="10.1-panel-data.html#cb239-23" tabindex="-1"></a><span class="co">#&gt; al-1987    114        94         11       127         31       138         30</span></span>
-<span id="cb239-24"><a href="10.1-panel-data.html#cb239-24" tabindex="-1"></a><span class="co">#&gt;          afatal     pop  pop1517  pop1820  pop2124 milestot unempus emppopus</span></span>
-<span id="cb239-25"><a href="10.1-panel-data.html#cb239-25" tabindex="-1"></a><span class="co">#&gt; al-1982 309.438 3942002 208999.6 221553.4 290000.1    28516     9.7     57.8</span></span>
-<span id="cb239-26"><a href="10.1-panel-data.html#cb239-26" tabindex="-1"></a><span class="co">#&gt; al-1983 341.834 3960008 202000.1 219125.5 290000.2    31032     9.6     57.9</span></span>
-<span id="cb239-27"><a href="10.1-panel-data.html#cb239-27" tabindex="-1"></a><span class="co">#&gt; al-1984 304.872 3988992 197000.0 216724.1 288000.2    32961     7.5     59.5</span></span>
-<span id="cb239-28"><a href="10.1-panel-data.html#cb239-28" tabindex="-1"></a><span class="co">#&gt; al-1985 276.742 4021008 194999.7 214349.0 284000.3    35091     7.2     60.1</span></span>
-<span id="cb239-29"><a href="10.1-panel-data.html#cb239-29" tabindex="-1"></a><span class="co">#&gt; al-1986 360.716 4049994 203999.9 212000.0 263000.3    36259     7.0     60.7</span></span>
-<span id="cb239-30"><a href="10.1-panel-data.html#cb239-30" tabindex="-1"></a><span class="co">#&gt; al-1987 368.421 4082999 204999.8 208998.5 258999.8    37426     6.2     61.5</span></span>
-<span id="cb239-31"><a href="10.1-panel-data.html#cb239-31" tabindex="-1"></a><span class="co">#&gt;                 gsp</span></span>
-<span id="cb239-32"><a href="10.1-panel-data.html#cb239-32" tabindex="-1"></a><span class="co">#&gt; al-1982 -0.02212476</span></span>
-<span id="cb239-33"><a href="10.1-panel-data.html#cb239-33" tabindex="-1"></a><span class="co">#&gt; al-1983  0.04655825</span></span>
-<span id="cb239-34"><a href="10.1-panel-data.html#cb239-34" tabindex="-1"></a><span class="co">#&gt; al-1984  0.06279784</span></span>
-<span id="cb239-35"><a href="10.1-panel-data.html#cb239-35" tabindex="-1"></a><span class="co">#&gt; al-1985  0.02748997</span></span>
-<span id="cb239-36"><a href="10.1-panel-data.html#cb239-36" tabindex="-1"></a><span class="co">#&gt; al-1986  0.03214295</span></span>
-<span id="cb239-37"><a href="10.1-panel-data.html#cb239-37" tabindex="-1"></a><span class="co">#&gt; al-1987  0.04897637</span></span></code></pre></div>
+<span id="cb239-3"><a href="10.1-panel-data.html#cb239-3" tabindex="-1"></a><span class="co">#&gt;         state year spirits unemp   income   emppop  beertax</span></span>
+<span id="cb239-4"><a href="10.1-panel-data.html#cb239-4" tabindex="-1"></a><span class="co">#&gt; al-1982    al 1982    1.37  14.4 10544.15 50.69204 1.539379</span></span>
+<span id="cb239-5"><a href="10.1-panel-data.html#cb239-5" tabindex="-1"></a><span class="co">#&gt; al-1983    al 1983    1.36  13.7 10732.80 52.14703 1.788991</span></span>
+<span id="cb239-6"><a href="10.1-panel-data.html#cb239-6" tabindex="-1"></a><span class="co">#&gt; al-1984    al 1984    1.32  11.1 11108.79 54.16809 1.714286</span></span>
+<span id="cb239-7"><a href="10.1-panel-data.html#cb239-7" tabindex="-1"></a><span class="co">#&gt; al-1985    al 1985    1.28   8.9 11332.63 55.27114 1.652542</span></span>
+<span id="cb239-8"><a href="10.1-panel-data.html#cb239-8" tabindex="-1"></a><span class="co">#&gt; al-1986    al 1986    1.23   9.8 11661.51 56.51450 1.609907</span></span>
+<span id="cb239-9"><a href="10.1-panel-data.html#cb239-9" tabindex="-1"></a><span class="co">#&gt; al-1987    al 1987    1.18   7.8 11944.00 57.50988 1.560000</span></span>
+<span id="cb239-10"><a href="10.1-panel-data.html#cb239-10" tabindex="-1"></a><span class="co">#&gt;         baptist  mormon drinkage     dry youngdrivers    miles</span></span>
+<span id="cb239-11"><a href="10.1-panel-data.html#cb239-11" tabindex="-1"></a><span class="co">#&gt; al-1982 30.3557 0.32829    19.00 25.0063     0.211572 7233.887</span></span>
+<span id="cb239-12"><a href="10.1-panel-data.html#cb239-12" tabindex="-1"></a><span class="co">#&gt; al-1983 30.3336 0.34341    19.00 22.9942     0.210768 7836.348</span></span>
+<span id="cb239-13"><a href="10.1-panel-data.html#cb239-13" tabindex="-1"></a><span class="co">#&gt; al-1984 30.3115 0.35924    19.00 24.0426     0.211484 8262.990</span></span>
+<span id="cb239-14"><a href="10.1-panel-data.html#cb239-14" tabindex="-1"></a><span class="co">#&gt; al-1985 30.2895 0.37579    19.67 23.6339     0.211140 8726.917</span></span>
+<span id="cb239-15"><a href="10.1-panel-data.html#cb239-15" tabindex="-1"></a><span class="co">#&gt; al-1986 30.2674 0.39311    21.00 23.4647     0.213400 8952.854</span></span>
+<span id="cb239-16"><a href="10.1-panel-data.html#cb239-16" tabindex="-1"></a><span class="co">#&gt; al-1987 30.2453 0.41123    21.00 23.7924     0.215527 9166.302</span></span>
+<span id="cb239-17"><a href="10.1-panel-data.html#cb239-17" tabindex="-1"></a><span class="co">#&gt;         breath jail service fatal nfatal sfatal fatal1517</span></span>
+<span id="cb239-18"><a href="10.1-panel-data.html#cb239-18" tabindex="-1"></a><span class="co">#&gt; al-1982     no   no      no   839    146     99        53</span></span>
+<span id="cb239-19"><a href="10.1-panel-data.html#cb239-19" tabindex="-1"></a><span class="co">#&gt; al-1983     no   no      no   930    154     98        71</span></span>
+<span id="cb239-20"><a href="10.1-panel-data.html#cb239-20" tabindex="-1"></a><span class="co">#&gt; al-1984     no   no      no   932    165     94        49</span></span>
+<span id="cb239-21"><a href="10.1-panel-data.html#cb239-21" tabindex="-1"></a><span class="co">#&gt; al-1985     no   no      no   882    146     98        66</span></span>
+<span id="cb239-22"><a href="10.1-panel-data.html#cb239-22" tabindex="-1"></a><span class="co">#&gt; al-1986     no   no      no  1081    172    119        82</span></span>
+<span id="cb239-23"><a href="10.1-panel-data.html#cb239-23" tabindex="-1"></a><span class="co">#&gt; al-1987     no   no      no  1110    181    114        94</span></span>
+<span id="cb239-24"><a href="10.1-panel-data.html#cb239-24" tabindex="-1"></a><span class="co">#&gt;         nfatal1517 fatal1820 nfatal1820 fatal2124 nfatal2124</span></span>
+<span id="cb239-25"><a href="10.1-panel-data.html#cb239-25" tabindex="-1"></a><span class="co">#&gt; al-1982          9        99         34       120         32</span></span>
+<span id="cb239-26"><a href="10.1-panel-data.html#cb239-26" tabindex="-1"></a><span class="co">#&gt; al-1983          8       108         26       124         35</span></span>
+<span id="cb239-27"><a href="10.1-panel-data.html#cb239-27" tabindex="-1"></a><span class="co">#&gt; al-1984          7       103         25       118         34</span></span>
+<span id="cb239-28"><a href="10.1-panel-data.html#cb239-28" tabindex="-1"></a><span class="co">#&gt; al-1985          9       100         23       114         45</span></span>
+<span id="cb239-29"><a href="10.1-panel-data.html#cb239-29" tabindex="-1"></a><span class="co">#&gt; al-1986         10       120         23       119         29</span></span>
+<span id="cb239-30"><a href="10.1-panel-data.html#cb239-30" tabindex="-1"></a><span class="co">#&gt; al-1987         11       127         31       138         30</span></span>
+<span id="cb239-31"><a href="10.1-panel-data.html#cb239-31" tabindex="-1"></a><span class="co">#&gt;          afatal     pop  pop1517  pop1820  pop2124 milestot</span></span>
+<span id="cb239-32"><a href="10.1-panel-data.html#cb239-32" tabindex="-1"></a><span class="co">#&gt; al-1982 309.438 3942002 208999.6 221553.4 290000.1    28516</span></span>
+<span id="cb239-33"><a href="10.1-panel-data.html#cb239-33" tabindex="-1"></a><span class="co">#&gt; al-1983 341.834 3960008 202000.1 219125.5 290000.2    31032</span></span>
+<span id="cb239-34"><a href="10.1-panel-data.html#cb239-34" tabindex="-1"></a><span class="co">#&gt; al-1984 304.872 3988992 197000.0 216724.1 288000.2    32961</span></span>
+<span id="cb239-35"><a href="10.1-panel-data.html#cb239-35" tabindex="-1"></a><span class="co">#&gt; al-1985 276.742 4021008 194999.7 214349.0 284000.3    35091</span></span>
+<span id="cb239-36"><a href="10.1-panel-data.html#cb239-36" tabindex="-1"></a><span class="co">#&gt; al-1986 360.716 4049994 203999.9 212000.0 263000.3    36259</span></span>
+<span id="cb239-37"><a href="10.1-panel-data.html#cb239-37" tabindex="-1"></a><span class="co">#&gt; al-1987 368.421 4082999 204999.8 208998.5 258999.8    37426</span></span>
+<span id="cb239-38"><a href="10.1-panel-data.html#cb239-38" tabindex="-1"></a><span class="co">#&gt;         unempus emppopus         gsp</span></span>
+<span id="cb239-39"><a href="10.1-panel-data.html#cb239-39" tabindex="-1"></a><span class="co">#&gt; al-1982     9.7     57.8 -0.02212476</span></span>
+<span id="cb239-40"><a href="10.1-panel-data.html#cb239-40" tabindex="-1"></a><span class="co">#&gt; al-1983     9.6     57.9  0.04655825</span></span>
+<span id="cb239-41"><a href="10.1-panel-data.html#cb239-41" tabindex="-1"></a><span class="co">#&gt; al-1984     7.5     59.5  0.06279784</span></span>
+<span id="cb239-42"><a href="10.1-panel-data.html#cb239-42" tabindex="-1"></a><span class="co">#&gt; al-1985     7.2     60.1  0.02748997</span></span>
+<span id="cb239-43"><a href="10.1-panel-data.html#cb239-43" tabindex="-1"></a><span class="co">#&gt; al-1986     7.0     60.7  0.03214295</span></span>
+<span id="cb239-44"><a href="10.1-panel-data.html#cb239-44" tabindex="-1"></a><span class="co">#&gt; al-1987     6.2     61.5  0.04897637</span></span></code></pre></div>
 <div class="sourceCode" id="cb240"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb240-1"><a href="10.1-panel-data.html#cb240-1" tabindex="-1"></a><span class="co"># summarize the variables &#39;state&#39; and &#39;year&#39;</span></span>
 <span id="cb240-2"><a href="10.1-panel-data.html#cb240-2" tabindex="-1"></a><span class="fu">summary</span>(Fatalities[, <span class="fu">c</span>(<span class="dv">1</span>, <span class="dv">2</span>)])</span>
 <span id="cb240-3"><a href="10.1-panel-data.html#cb240-3" tabindex="-1"></a><span class="co">#&gt;      state       year   </span></span>

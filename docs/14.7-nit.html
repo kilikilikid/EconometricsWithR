@@ -597,11 +597,14 @@ a <em>random walk model with a drift</em> which allows to model the tendency of 
 <span id="cb388-4"><a href="14.7-nit.html#cb388-4" tabindex="-1"></a><span class="co">#&gt; </span></span>
 <span id="cb388-5"><a href="14.7-nit.html#cb388-5" tabindex="-1"></a><span class="co">#&gt; t test of coefficients:</span></span>
 <span id="cb388-6"><a href="14.7-nit.html#cb388-6" tabindex="-1"></a><span class="co">#&gt; </span></span>
-<span id="cb388-7"><a href="14.7-nit.html#cb388-7" tabindex="-1"></a><span class="co">#&gt;                             Estimate Std. Error t value  Pr(&gt;|t|)    </span></span>
-<span id="cb388-8"><a href="14.7-nit.html#cb388-8" tabindex="-1"></a><span class="co">#&gt; (Intercept)                 -2.37452    1.12041 -2.1193    0.0367 *  </span></span>
-<span id="cb388-9"><a href="14.7-nit.html#cb388-9" tabindex="-1"></a><span class="co">#&gt; ts(JPIndProd[&quot;1962::1985&quot;])  2.22057    0.29233  7.5961 2.227e-11 ***</span></span>
-<span id="cb388-10"><a href="14.7-nit.html#cb388-10" tabindex="-1"></a><span class="co">#&gt; ---</span></span>
-<span id="cb388-11"><a href="14.7-nit.html#cb388-11" tabindex="-1"></a><span class="co">#&gt; Signif. codes:  0 &#39;***&#39; 0.001 &#39;**&#39; 0.01 &#39;*&#39; 0.05 &#39;.&#39; 0.1 &#39; &#39; 1</span></span></code></pre></div>
+<span id="cb388-7"><a href="14.7-nit.html#cb388-7" tabindex="-1"></a><span class="co">#&gt;                             Estimate Std. Error t value</span></span>
+<span id="cb388-8"><a href="14.7-nit.html#cb388-8" tabindex="-1"></a><span class="co">#&gt; (Intercept)                 -2.37452    1.12041 -2.1193</span></span>
+<span id="cb388-9"><a href="14.7-nit.html#cb388-9" tabindex="-1"></a><span class="co">#&gt; ts(JPIndProd[&quot;1962::1985&quot;])  2.22057    0.29233  7.5961</span></span>
+<span id="cb388-10"><a href="14.7-nit.html#cb388-10" tabindex="-1"></a><span class="co">#&gt;                              Pr(&gt;|t|)    </span></span>
+<span id="cb388-11"><a href="14.7-nit.html#cb388-11" tabindex="-1"></a><span class="co">#&gt; (Intercept)                    0.0367 *  </span></span>
+<span id="cb388-12"><a href="14.7-nit.html#cb388-12" tabindex="-1"></a><span class="co">#&gt; ts(JPIndProd[&quot;1962::1985&quot;]) 2.227e-11 ***</span></span>
+<span id="cb388-13"><a href="14.7-nit.html#cb388-13" tabindex="-1"></a><span class="co">#&gt; ---</span></span>
+<span id="cb388-14"><a href="14.7-nit.html#cb388-14" tabindex="-1"></a><span class="co">#&gt; Signif. codes:  0 &#39;***&#39; 0.001 &#39;**&#39; 0.01 &#39;*&#39; 0.05 &#39;.&#39; 0.1 &#39; &#39; 1</span></span></code></pre></div>
 <p>A simple regression of the U.S. unemployment rate on Japanese industrial production using data from 1962 to 1985 yields
 <span class="math display" id="eq:urjpip1">\[\begin{align}
   \widehat{U.S. UR}_t = -\underset{(1.12)}{2.37} + \underset{(0.29)}{2.22} \log(JapaneseIP_t). \tag{14.8}
@@ -613,11 +616,14 @@ This appears to be a significant relationship: the <span class="math inline">\(t
 <span id="cb389-4"><a href="14.7-nit.html#cb389-4" tabindex="-1"></a><span class="co">#&gt; </span></span>
 <span id="cb389-5"><a href="14.7-nit.html#cb389-5" tabindex="-1"></a><span class="co">#&gt; t test of coefficients:</span></span>
 <span id="cb389-6"><a href="14.7-nit.html#cb389-6" tabindex="-1"></a><span class="co">#&gt; </span></span>
-<span id="cb389-7"><a href="14.7-nit.html#cb389-7" tabindex="-1"></a><span class="co">#&gt;                             Estimate Std. Error t value  Pr(&gt;|t|)    </span></span>
-<span id="cb389-8"><a href="14.7-nit.html#cb389-8" tabindex="-1"></a><span class="co">#&gt; (Intercept)                  41.7763     5.4066  7.7270 6.596e-12 ***</span></span>
-<span id="cb389-9"><a href="14.7-nit.html#cb389-9" tabindex="-1"></a><span class="co">#&gt; ts(JPIndProd[&quot;1986::2012&quot;])  -7.7771     1.1714 -6.6391 1.386e-09 ***</span></span>
-<span id="cb389-10"><a href="14.7-nit.html#cb389-10" tabindex="-1"></a><span class="co">#&gt; ---</span></span>
-<span id="cb389-11"><a href="14.7-nit.html#cb389-11" tabindex="-1"></a><span class="co">#&gt; Signif. codes:  0 &#39;***&#39; 0.001 &#39;**&#39; 0.01 &#39;*&#39; 0.05 &#39;.&#39; 0.1 &#39; &#39; 1</span></span></code></pre></div>
+<span id="cb389-7"><a href="14.7-nit.html#cb389-7" tabindex="-1"></a><span class="co">#&gt;                             Estimate Std. Error t value</span></span>
+<span id="cb389-8"><a href="14.7-nit.html#cb389-8" tabindex="-1"></a><span class="co">#&gt; (Intercept)                  41.7763     5.4066  7.7270</span></span>
+<span id="cb389-9"><a href="14.7-nit.html#cb389-9" tabindex="-1"></a><span class="co">#&gt; ts(JPIndProd[&quot;1986::2012&quot;])  -7.7771     1.1714 -6.6391</span></span>
+<span id="cb389-10"><a href="14.7-nit.html#cb389-10" tabindex="-1"></a><span class="co">#&gt;                              Pr(&gt;|t|)    </span></span>
+<span id="cb389-11"><a href="14.7-nit.html#cb389-11" tabindex="-1"></a><span class="co">#&gt; (Intercept)                 6.596e-12 ***</span></span>
+<span id="cb389-12"><a href="14.7-nit.html#cb389-12" tabindex="-1"></a><span class="co">#&gt; ts(JPIndProd[&quot;1986::2012&quot;]) 1.386e-09 ***</span></span>
+<span id="cb389-13"><a href="14.7-nit.html#cb389-13" tabindex="-1"></a><span class="co">#&gt; ---</span></span>
+<span id="cb389-14"><a href="14.7-nit.html#cb389-14" tabindex="-1"></a><span class="co">#&gt; Signif. codes:  0 &#39;***&#39; 0.001 &#39;**&#39; 0.01 &#39;*&#39; 0.05 &#39;.&#39; 0.1 &#39; &#39; 1</span></span></code></pre></div>
 <p>When estimating the same model, this time with data from 1986 to 2012, we obtain
 <span class="math display" id="eq:urjpip2">\[\begin{align}
   \widehat{U.S. UR}_t = \underset{(5.41)}{41.78} -\underset{(1.17)}{7.78} \log(JapaneseIP)_t \tag{14.9}
@@ -817,14 +823,20 @@ where <span class="math inline">\(b \cdot t\)</span> is a linear time trend. <sp
 <span id="cb393-8"><a href="14.7-nit.html#cb393-8" tabindex="-1"></a><span class="co">#&gt; </span></span>
 <span id="cb393-9"><a href="14.7-nit.html#cb393-9" tabindex="-1"></a><span class="co">#&gt; t test of coefficients:</span></span>
 <span id="cb393-10"><a href="14.7-nit.html#cb393-10" tabindex="-1"></a><span class="co">#&gt; </span></span>
-<span id="cb393-11"><a href="14.7-nit.html#cb393-11" tabindex="-1"></a><span class="co">#&gt;                             Estimate  Std. Error t value Pr(&gt;|t|)   </span></span>
-<span id="cb393-12"><a href="14.7-nit.html#cb393-12" tabindex="-1"></a><span class="co">#&gt; (Intercept)               0.27877045  0.11793233  2.3638 0.019066 * </span></span>
-<span id="cb393-13"><a href="14.7-nit.html#cb393-13" tabindex="-1"></a><span class="co">#&gt; trend(LogGDP, scale = F)  0.00023818  0.00011090  2.1476 0.032970 * </span></span>
-<span id="cb393-14"><a href="14.7-nit.html#cb393-14" tabindex="-1"></a><span class="co">#&gt; L(LogGDP)                -0.03332452  0.01441436 -2.3119 0.021822 * </span></span>
-<span id="cb393-15"><a href="14.7-nit.html#cb393-15" tabindex="-1"></a><span class="co">#&gt; diff(L(LogGDP))           0.08317976  0.11295542  0.7364 0.462371   </span></span>
-<span id="cb393-16"><a href="14.7-nit.html#cb393-16" tabindex="-1"></a><span class="co">#&gt; diff(L(LogGDP), 2)        0.18763384  0.07055574  2.6594 0.008476 **</span></span>
-<span id="cb393-17"><a href="14.7-nit.html#cb393-17" tabindex="-1"></a><span class="co">#&gt; ---</span></span>
-<span id="cb393-18"><a href="14.7-nit.html#cb393-18" tabindex="-1"></a><span class="co">#&gt; Signif. codes:  0 &#39;***&#39; 0.001 &#39;**&#39; 0.01 &#39;*&#39; 0.05 &#39;.&#39; 0.1 &#39; &#39; 1</span></span></code></pre></div>
+<span id="cb393-11"><a href="14.7-nit.html#cb393-11" tabindex="-1"></a><span class="co">#&gt;                             Estimate  Std. Error t value</span></span>
+<span id="cb393-12"><a href="14.7-nit.html#cb393-12" tabindex="-1"></a><span class="co">#&gt; (Intercept)               0.27877045  0.11793233  2.3638</span></span>
+<span id="cb393-13"><a href="14.7-nit.html#cb393-13" tabindex="-1"></a><span class="co">#&gt; trend(LogGDP, scale = F)  0.00023818  0.00011090  2.1476</span></span>
+<span id="cb393-14"><a href="14.7-nit.html#cb393-14" tabindex="-1"></a><span class="co">#&gt; L(LogGDP)                -0.03332452  0.01441436 -2.3119</span></span>
+<span id="cb393-15"><a href="14.7-nit.html#cb393-15" tabindex="-1"></a><span class="co">#&gt; diff(L(LogGDP))           0.08317976  0.11295542  0.7364</span></span>
+<span id="cb393-16"><a href="14.7-nit.html#cb393-16" tabindex="-1"></a><span class="co">#&gt; diff(L(LogGDP), 2)        0.18763384  0.07055574  2.6594</span></span>
+<span id="cb393-17"><a href="14.7-nit.html#cb393-17" tabindex="-1"></a><span class="co">#&gt;                          Pr(&gt;|t|)   </span></span>
+<span id="cb393-18"><a href="14.7-nit.html#cb393-18" tabindex="-1"></a><span class="co">#&gt; (Intercept)              0.019066 * </span></span>
+<span id="cb393-19"><a href="14.7-nit.html#cb393-19" tabindex="-1"></a><span class="co">#&gt; trend(LogGDP, scale = F) 0.032970 * </span></span>
+<span id="cb393-20"><a href="14.7-nit.html#cb393-20" tabindex="-1"></a><span class="co">#&gt; L(LogGDP)                0.021822 * </span></span>
+<span id="cb393-21"><a href="14.7-nit.html#cb393-21" tabindex="-1"></a><span class="co">#&gt; diff(L(LogGDP))          0.462371   </span></span>
+<span id="cb393-22"><a href="14.7-nit.html#cb393-22" tabindex="-1"></a><span class="co">#&gt; diff(L(LogGDP), 2)       0.008476 **</span></span>
+<span id="cb393-23"><a href="14.7-nit.html#cb393-23" tabindex="-1"></a><span class="co">#&gt; ---</span></span>
+<span id="cb393-24"><a href="14.7-nit.html#cb393-24" tabindex="-1"></a><span class="co">#&gt; Signif. codes:  0 &#39;***&#39; 0.001 &#39;**&#39; 0.01 &#39;*&#39; 0.05 &#39;.&#39; 0.1 &#39; &#39; 1</span></span></code></pre></div>
 <p>The estimation yields
 <span class="math display">\[\begin{align*}
   \Delta\log(GDP_t) =&amp; \underset{(0.118)}{0.28} + \underset{(0.0001)}{0.0002} t -\underset{(0.014)}{0.033} \log(GDP_{t-1}) \\

@@ -507,22 +507,30 @@ The instrument <span class="math inline">\(Z\)</span> <em>must not be</em> corre
 <span id="cb286-2"><a href="12.1-TIVEWASRAASI.html#cb286-2" tabindex="-1"></a><span class="fu">library</span>(AER)</span>
 <span id="cb286-3"><a href="12.1-TIVEWASRAASI.html#cb286-3" tabindex="-1"></a><span class="fu">data</span>(<span class="st">&quot;CigarettesSW&quot;</span>)</span>
 <span id="cb286-4"><a href="12.1-TIVEWASRAASI.html#cb286-4" tabindex="-1"></a><span class="fu">summary</span>(CigarettesSW)</span>
-<span id="cb286-5"><a href="12.1-TIVEWASRAASI.html#cb286-5" tabindex="-1"></a><span class="co">#&gt;      state      year         cpi          population           packs       </span></span>
-<span id="cb286-6"><a href="12.1-TIVEWASRAASI.html#cb286-6" tabindex="-1"></a><span class="co">#&gt;  AL     : 2   1985:48   Min.   :1.076   Min.   :  478447   Min.   : 49.27  </span></span>
-<span id="cb286-7"><a href="12.1-TIVEWASRAASI.html#cb286-7" tabindex="-1"></a><span class="co">#&gt;  AR     : 2   1995:48   1st Qu.:1.076   1st Qu.: 1622606   1st Qu.: 92.45  </span></span>
-<span id="cb286-8"><a href="12.1-TIVEWASRAASI.html#cb286-8" tabindex="-1"></a><span class="co">#&gt;  AZ     : 2             Median :1.300   Median : 3697472   Median :110.16  </span></span>
-<span id="cb286-9"><a href="12.1-TIVEWASRAASI.html#cb286-9" tabindex="-1"></a><span class="co">#&gt;  CA     : 2             Mean   :1.300   Mean   : 5168866   Mean   :109.18  </span></span>
-<span id="cb286-10"><a href="12.1-TIVEWASRAASI.html#cb286-10" tabindex="-1"></a><span class="co">#&gt;  CO     : 2             3rd Qu.:1.524   3rd Qu.: 5901500   3rd Qu.:123.52  </span></span>
-<span id="cb286-11"><a href="12.1-TIVEWASRAASI.html#cb286-11" tabindex="-1"></a><span class="co">#&gt;  CT     : 2             Max.   :1.524   Max.   :31493524   Max.   :197.99  </span></span>
-<span id="cb286-12"><a href="12.1-TIVEWASRAASI.html#cb286-12" tabindex="-1"></a><span class="co">#&gt;  (Other):84                                                                </span></span>
-<span id="cb286-13"><a href="12.1-TIVEWASRAASI.html#cb286-13" tabindex="-1"></a><span class="co">#&gt;      income               tax            price             taxs       </span></span>
-<span id="cb286-14"><a href="12.1-TIVEWASRAASI.html#cb286-14" tabindex="-1"></a><span class="co">#&gt;  Min.   :  6887097   Min.   :18.00   Min.   : 84.97   Min.   : 21.27  </span></span>
-<span id="cb286-15"><a href="12.1-TIVEWASRAASI.html#cb286-15" tabindex="-1"></a><span class="co">#&gt;  1st Qu.: 25520384   1st Qu.:31.00   1st Qu.:102.71   1st Qu.: 34.77  </span></span>
-<span id="cb286-16"><a href="12.1-TIVEWASRAASI.html#cb286-16" tabindex="-1"></a><span class="co">#&gt;  Median : 61661644   Median :37.00   Median :137.72   Median : 41.05  </span></span>
-<span id="cb286-17"><a href="12.1-TIVEWASRAASI.html#cb286-17" tabindex="-1"></a><span class="co">#&gt;  Mean   : 99878736   Mean   :42.68   Mean   :143.45   Mean   : 48.33  </span></span>
-<span id="cb286-18"><a href="12.1-TIVEWASRAASI.html#cb286-18" tabindex="-1"></a><span class="co">#&gt;  3rd Qu.:127313964   3rd Qu.:50.88   3rd Qu.:176.15   3rd Qu.: 59.48  </span></span>
-<span id="cb286-19"><a href="12.1-TIVEWASRAASI.html#cb286-19" tabindex="-1"></a><span class="co">#&gt;  Max.   :771470144   Max.   :99.00   Max.   :240.85   Max.   :112.63  </span></span>
-<span id="cb286-20"><a href="12.1-TIVEWASRAASI.html#cb286-20" tabindex="-1"></a><span class="co">#&gt; </span></span></code></pre></div>
+<span id="cb286-5"><a href="12.1-TIVEWASRAASI.html#cb286-5" tabindex="-1"></a><span class="co">#&gt;      state      year         cpi          population      </span></span>
+<span id="cb286-6"><a href="12.1-TIVEWASRAASI.html#cb286-6" tabindex="-1"></a><span class="co">#&gt;  AL     : 2   1985:48   Min.   :1.076   Min.   :  478447  </span></span>
+<span id="cb286-7"><a href="12.1-TIVEWASRAASI.html#cb286-7" tabindex="-1"></a><span class="co">#&gt;  AR     : 2   1995:48   1st Qu.:1.076   1st Qu.: 1622606  </span></span>
+<span id="cb286-8"><a href="12.1-TIVEWASRAASI.html#cb286-8" tabindex="-1"></a><span class="co">#&gt;  AZ     : 2             Median :1.300   Median : 3697472  </span></span>
+<span id="cb286-9"><a href="12.1-TIVEWASRAASI.html#cb286-9" tabindex="-1"></a><span class="co">#&gt;  CA     : 2             Mean   :1.300   Mean   : 5168866  </span></span>
+<span id="cb286-10"><a href="12.1-TIVEWASRAASI.html#cb286-10" tabindex="-1"></a><span class="co">#&gt;  CO     : 2             3rd Qu.:1.524   3rd Qu.: 5901500  </span></span>
+<span id="cb286-11"><a href="12.1-TIVEWASRAASI.html#cb286-11" tabindex="-1"></a><span class="co">#&gt;  CT     : 2             Max.   :1.524   Max.   :31493524  </span></span>
+<span id="cb286-12"><a href="12.1-TIVEWASRAASI.html#cb286-12" tabindex="-1"></a><span class="co">#&gt;  (Other):84                                               </span></span>
+<span id="cb286-13"><a href="12.1-TIVEWASRAASI.html#cb286-13" tabindex="-1"></a><span class="co">#&gt;      packs            income               tax       </span></span>
+<span id="cb286-14"><a href="12.1-TIVEWASRAASI.html#cb286-14" tabindex="-1"></a><span class="co">#&gt;  Min.   : 49.27   Min.   :  6887097   Min.   :18.00  </span></span>
+<span id="cb286-15"><a href="12.1-TIVEWASRAASI.html#cb286-15" tabindex="-1"></a><span class="co">#&gt;  1st Qu.: 92.45   1st Qu.: 25520384   1st Qu.:31.00  </span></span>
+<span id="cb286-16"><a href="12.1-TIVEWASRAASI.html#cb286-16" tabindex="-1"></a><span class="co">#&gt;  Median :110.16   Median : 61661644   Median :37.00  </span></span>
+<span id="cb286-17"><a href="12.1-TIVEWASRAASI.html#cb286-17" tabindex="-1"></a><span class="co">#&gt;  Mean   :109.18   Mean   : 99878736   Mean   :42.68  </span></span>
+<span id="cb286-18"><a href="12.1-TIVEWASRAASI.html#cb286-18" tabindex="-1"></a><span class="co">#&gt;  3rd Qu.:123.52   3rd Qu.:127313964   3rd Qu.:50.88  </span></span>
+<span id="cb286-19"><a href="12.1-TIVEWASRAASI.html#cb286-19" tabindex="-1"></a><span class="co">#&gt;  Max.   :197.99   Max.   :771470144   Max.   :99.00  </span></span>
+<span id="cb286-20"><a href="12.1-TIVEWASRAASI.html#cb286-20" tabindex="-1"></a><span class="co">#&gt;                                                      </span></span>
+<span id="cb286-21"><a href="12.1-TIVEWASRAASI.html#cb286-21" tabindex="-1"></a><span class="co">#&gt;      price             taxs       </span></span>
+<span id="cb286-22"><a href="12.1-TIVEWASRAASI.html#cb286-22" tabindex="-1"></a><span class="co">#&gt;  Min.   : 84.97   Min.   : 21.27  </span></span>
+<span id="cb286-23"><a href="12.1-TIVEWASRAASI.html#cb286-23" tabindex="-1"></a><span class="co">#&gt;  1st Qu.:102.71   1st Qu.: 34.77  </span></span>
+<span id="cb286-24"><a href="12.1-TIVEWASRAASI.html#cb286-24" tabindex="-1"></a><span class="co">#&gt;  Median :137.72   Median : 41.05  </span></span>
+<span id="cb286-25"><a href="12.1-TIVEWASRAASI.html#cb286-25" tabindex="-1"></a><span class="co">#&gt;  Mean   :143.45   Mean   : 48.33  </span></span>
+<span id="cb286-26"><a href="12.1-TIVEWASRAASI.html#cb286-26" tabindex="-1"></a><span class="co">#&gt;  3rd Qu.:176.15   3rd Qu.: 59.48  </span></span>
+<span id="cb286-27"><a href="12.1-TIVEWASRAASI.html#cb286-27" tabindex="-1"></a><span class="co">#&gt;  Max.   :240.85   Max.   :112.63  </span></span>
+<span id="cb286-28"><a href="12.1-TIVEWASRAASI.html#cb286-28" tabindex="-1"></a><span class="co">#&gt; </span></span></code></pre></div>
 <p>Use <code>?CigarettesSW</code> for a detailed description of the variables.</p>
 <p>We are interested in estimating <span class="math inline">\(\beta_1\)</span> in</p>
 <p><span class="math display" id="eq:cigstsls">\[\begin{align}

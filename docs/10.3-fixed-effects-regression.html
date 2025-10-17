@@ -539,20 +539,20 @@ a regression of the traffic fatality rate on beer tax and 48 binary regressors â
 <span id="cb248-5"><a href="10.3-fixed-effects-regression.html#cb248-5" tabindex="-1"></a><span class="co">#&gt; lm(formula = fatal_rate ~ beertax + state - 1, data = Fatalities)</span></span>
 <span id="cb248-6"><a href="10.3-fixed-effects-regression.html#cb248-6" tabindex="-1"></a><span class="co">#&gt; </span></span>
 <span id="cb248-7"><a href="10.3-fixed-effects-regression.html#cb248-7" tabindex="-1"></a><span class="co">#&gt; Coefficients:</span></span>
-<span id="cb248-8"><a href="10.3-fixed-effects-regression.html#cb248-8" tabindex="-1"></a><span class="co">#&gt; beertax  stateal  stateaz  statear  stateca  stateco  statect  statede  </span></span>
-<span id="cb248-9"><a href="10.3-fixed-effects-regression.html#cb248-9" tabindex="-1"></a><span class="co">#&gt; -0.6559   3.4776   2.9099   2.8227   1.9682   1.9933   1.6154   2.1700  </span></span>
-<span id="cb248-10"><a href="10.3-fixed-effects-regression.html#cb248-10" tabindex="-1"></a><span class="co">#&gt; statefl  statega  stateid  stateil  statein  stateia  stateks  stateky  </span></span>
-<span id="cb248-11"><a href="10.3-fixed-effects-regression.html#cb248-11" tabindex="-1"></a><span class="co">#&gt;  3.2095   4.0022   2.8086   1.5160   2.0161   1.9337   2.2544   2.2601  </span></span>
-<span id="cb248-12"><a href="10.3-fixed-effects-regression.html#cb248-12" tabindex="-1"></a><span class="co">#&gt; statela  stateme  statemd  statema  statemi  statemn  statems  statemo  </span></span>
-<span id="cb248-13"><a href="10.3-fixed-effects-regression.html#cb248-13" tabindex="-1"></a><span class="co">#&gt;  2.6305   2.3697   1.7712   1.3679   1.9931   1.5804   3.4486   2.1814  </span></span>
-<span id="cb248-14"><a href="10.3-fixed-effects-regression.html#cb248-14" tabindex="-1"></a><span class="co">#&gt; statemt  statene  statenv  statenh  statenj  statenm  stateny  statenc  </span></span>
-<span id="cb248-15"><a href="10.3-fixed-effects-regression.html#cb248-15" tabindex="-1"></a><span class="co">#&gt;  3.1172   1.9555   2.8769   2.2232   1.3719   3.9040   1.2910   3.1872  </span></span>
-<span id="cb248-16"><a href="10.3-fixed-effects-regression.html#cb248-16" tabindex="-1"></a><span class="co">#&gt; statend  stateoh  stateok  stateor  statepa  stateri  statesc  statesd  </span></span>
-<span id="cb248-17"><a href="10.3-fixed-effects-regression.html#cb248-17" tabindex="-1"></a><span class="co">#&gt;  1.8542   1.8032   2.9326   2.3096   1.7102   1.2126   4.0348   2.4739  </span></span>
-<span id="cb248-18"><a href="10.3-fixed-effects-regression.html#cb248-18" tabindex="-1"></a><span class="co">#&gt; statetn  statetx  stateut  statevt  stateva  statewa  statewv  statewi  </span></span>
-<span id="cb248-19"><a href="10.3-fixed-effects-regression.html#cb248-19" tabindex="-1"></a><span class="co">#&gt;  2.6020   2.5602   2.3137   2.5116   2.1874   1.8181   2.5809   1.7184  </span></span>
-<span id="cb248-20"><a href="10.3-fixed-effects-regression.html#cb248-20" tabindex="-1"></a><span class="co">#&gt; statewy  </span></span>
-<span id="cb248-21"><a href="10.3-fixed-effects-regression.html#cb248-21" tabindex="-1"></a><span class="co">#&gt;  3.2491</span></span></code></pre></div>
+<span id="cb248-8"><a href="10.3-fixed-effects-regression.html#cb248-8" tabindex="-1"></a><span class="co">#&gt; beertax  stateal  stateaz  statear  stateca  stateco  statect  </span></span>
+<span id="cb248-9"><a href="10.3-fixed-effects-regression.html#cb248-9" tabindex="-1"></a><span class="co">#&gt; -0.6559   3.4776   2.9099   2.8227   1.9682   1.9933   1.6154  </span></span>
+<span id="cb248-10"><a href="10.3-fixed-effects-regression.html#cb248-10" tabindex="-1"></a><span class="co">#&gt; statede  statefl  statega  stateid  stateil  statein  stateia  </span></span>
+<span id="cb248-11"><a href="10.3-fixed-effects-regression.html#cb248-11" tabindex="-1"></a><span class="co">#&gt;  2.1700   3.2095   4.0022   2.8086   1.5160   2.0161   1.9337  </span></span>
+<span id="cb248-12"><a href="10.3-fixed-effects-regression.html#cb248-12" tabindex="-1"></a><span class="co">#&gt; stateks  stateky  statela  stateme  statemd  statema  statemi  </span></span>
+<span id="cb248-13"><a href="10.3-fixed-effects-regression.html#cb248-13" tabindex="-1"></a><span class="co">#&gt;  2.2544   2.2601   2.6305   2.3697   1.7712   1.3679   1.9931  </span></span>
+<span id="cb248-14"><a href="10.3-fixed-effects-regression.html#cb248-14" tabindex="-1"></a><span class="co">#&gt; statemn  statems  statemo  statemt  statene  statenv  statenh  </span></span>
+<span id="cb248-15"><a href="10.3-fixed-effects-regression.html#cb248-15" tabindex="-1"></a><span class="co">#&gt;  1.5804   3.4486   2.1814   3.1172   1.9555   2.8769   2.2232  </span></span>
+<span id="cb248-16"><a href="10.3-fixed-effects-regression.html#cb248-16" tabindex="-1"></a><span class="co">#&gt; statenj  statenm  stateny  statenc  statend  stateoh  stateok  </span></span>
+<span id="cb248-17"><a href="10.3-fixed-effects-regression.html#cb248-17" tabindex="-1"></a><span class="co">#&gt;  1.3719   3.9040   1.2910   3.1872   1.8542   1.8032   2.9326  </span></span>
+<span id="cb248-18"><a href="10.3-fixed-effects-regression.html#cb248-18" tabindex="-1"></a><span class="co">#&gt; stateor  statepa  stateri  statesc  statesd  statetn  statetx  </span></span>
+<span id="cb248-19"><a href="10.3-fixed-effects-regression.html#cb248-19" tabindex="-1"></a><span class="co">#&gt;  2.3096   1.7102   1.2126   4.0348   2.4739   2.6020   2.5602  </span></span>
+<span id="cb248-20"><a href="10.3-fixed-effects-regression.html#cb248-20" tabindex="-1"></a><span class="co">#&gt; stateut  statevt  stateva  statewa  statewv  statewi  statewy  </span></span>
+<span id="cb248-21"><a href="10.3-fixed-effects-regression.html#cb248-21" tabindex="-1"></a><span class="co">#&gt;  2.3137   2.5116   2.1874   1.8181   2.5809   1.7184   3.2491</span></span></code></pre></div>
 <p>As discussed in the previous section, it is also possible to estimate <span class="math inline">\(\beta_1\)</span> by applying OLS to the demeaned data, that is, to run the regression</p>
 <p><span class="math display">\[\overset{\sim}{FatalityRate} = \beta_1 \overset{\sim}{BeerTax}_{it} + u_{it}. \]</span></p>
 <div class="sourceCode" id="cb249"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb249-1"><a href="10.3-fixed-effects-regression.html#cb249-1" tabindex="-1"></a><span class="co"># obtain demeaned data</span></span>
